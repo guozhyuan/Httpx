@@ -1,9 +1,8 @@
 apply plugin: 'com.android.library'
 
-apply plugin: 'maven'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
-
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
@@ -55,29 +54,16 @@ dependencies {
     compile 'io.reactivex:rxjava:1.1.6'
 }
 
+//apply from: rootProject.file('gradle/android-artifacts.gradle')
+//apply from: rootProject.file('gradle/gradle-jcenter-push.gradle')
+//apply from: 'https://raw.githubusercontent.com/BaronZ/android-common/master/gradle/android-artifacts.gradle'
+//apply from: 'https://raw.githubusercontent.com/BaronZ/android-common/master/gradle/gradle-jcenter-push.gradle'
 
-//uploadArchives {
-//    configuration = configurations.archives
-//    repositories {
-//        mavenDeployer {
-//            snapshotRepository(url: MAVEN_SNAPSHOT_URL) {
-//                authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
-//            }
-//
-//            repository(url: MAVEN_SNAPSHOT_URL) {
-//                authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
-//            }
-//
-//            pom.project {
-//                version POM_VERSION//版本号
-//                artifactId ARTIFACT_ID
-//                groupId GROUP_ID
-//                packaging TYPE
-//                description DESCRIPTION
-//            }
-//        }
-//    }
-//}
-
-apply from: 'https://raw.githubusercontent.com/BaronZ/android-common/master/gradle/android-artifacts.gradle'
-apply from: 'https://raw.githubusercontent.com/BaronZ/android-common/master/gradle/gradle-jcenter-push.gradle'
+publish {
+    userOrg = 'jugg'
+    groupId = 'com.qinxiang.httplib'
+    artifactId = 'HttpX'
+    publishVersion = '1.0'
+    desc = 'desc...'
+    website = 'https://github.com/guo'
+}

@@ -14,6 +14,7 @@ import com.qinxiang.httplib.ICallback;
 import com.qinxiang.httplib.Method;
 import com.qinxiang.httplib.Params;
 import com.qinxiang.retrofit.RetrofitX;
+import com.socks.library.KLog;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void execute(HttpXResult<Object> res) throws Exception {
 //                KLog.e(TAG, "login");
-//                KLog.e("login");
+                KLog.e("login");
             }
         });
 
