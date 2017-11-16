@@ -63,7 +63,7 @@ publish {
     userOrg = 'jugg'
     groupId = 'com.qinxiang.httplib'
     artifactId = 'HttpX'
-    publishVersion = '1.0'
+    publishVersion = '1.1'
     desc = 'desc...'
     website = 'https://github.com/guo'
 }

@@ -6,7 +6,7 @@ package com.qinxiang.retrofit;
 
 public class HttpResult<T> {
     public int status;
-    public String error;
+    public String msg;
     public T data;
 
 }
